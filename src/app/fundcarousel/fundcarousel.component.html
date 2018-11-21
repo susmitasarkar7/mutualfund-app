@@ -87,98 +87,112 @@
     </div>
 
     <div class="col-lg-6">
-        <div class="main">
-            <div class="main-login main-center">
-            <h4>Sign Up</h4>
-              <form class="" method="post" action="#">
-                
-                <div class="form-group">
-                  <label for="name" class="cols-sm-2 control-label">Your Name</label>
-                  <div class="cols-sm-10">
-                    <div class="input-group">
-                      <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                      <input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
-                    </div>
-                  </div>
-                </div>
-    
-                <div class="form-group">
-                  <label for="email" class="cols-sm-2 control-label">Your Email</label>
-                  <div class="cols-sm-10">
-                    <div class="input-group">
-                      <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                      <input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
-                    </div>
-                  </div>
-                </div>
-    
-                <div class="form-group">
-                  <label for="pan" class="cols-sm-2 control-label">PAN</label>
-                  <div class="cols-sm-10">
-                    <div class="input-group">
-                      <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                      <input type="text" class="form-control" name="pan" id="pan"  placeholder="Enter your Pan"/>
-                    </div>
-                  </div>
-                </div>
-    
-                <div class="form-group">
-                  <label for="password" class="cols-sm-2 control-label">Password</label>
-                  <div class="cols-sm-10">
-                    <div class="input-group">
-                      <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                      <input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
-                    </div>
-                  </div>
-                </div>
-    
-                <div class="form-group">
-                  <label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
-                  <div class="cols-sm-10">
-                    <div class="input-group">
-                      <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                      <input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirm your Password"/>
-                    </div>
-                  </div>
-                </div>
-    
-                <div class="form-group">
-                    <label for="address" class="cols-sm-2 control-label">Address</label>
-                    <div class="cols-sm-10">
-                      <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                        <input type="password" class="form-control" name="address" id="address"  placeholder="Enter your Address"/>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                      <label for="bank" class="cols-sm-2 control-label">Bank Name</label>
-                      <div class="cols-sm-10">
-                        <div class="input-group">
-                          <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                          <input type="password" class="form-control" name="bank" id="bank"  placeholder="Enter your Bank Name"/>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="confirm" class="cols-sm-2 control-label">Bank A/C No</label>
-                        <div class="cols-sm-10">
-                          <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                            <input type="password" class="form-control" name="bankac" id="bankac"  placeholder="Confirm your Bank A/C no"/>
-                          </div>
-                        </div>
-                      </div>
-
-                <div class="form-group ">
-                  <a href="#" target="_blank" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Register</a>
-                </div>
-                
-              </form>
+      
+      <div class="login-form">
+        <form action="" method="post">
+            <h2 class="text-center">Login</h2>   
+            <div class="form-group has-error">
+              <input type="text" class="form-control" name="username" placeholder="Username" required="required">
+            </div>
+        <div class="form-group">
+                <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+            </div>        
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+            </div>
+            <p><a href="#">Lost your Password?</a></p>
+        </form>
+        <p class="text-center small">Don't have an account?
+           <button class="btn-info" style="color:#fff" 
+            (click)="toggleCollape()">Sign up here!</button></p>
+    </div>
+     
+    <div *ngIf="!isCollasped">
+    <div class="login-form">
+      <div class="main-login main-center">
+      <h4 class="text-center">Sign Up</h4>
+        <form class="" method="post" action="#">
+          
+          <div class="form-group">
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                <input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
+              </div>
             </div>
           </div>
+  
+          <div class="form-group">
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                <input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+              </div>
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                <input type="text" class="form-control" name="pan" id="pan"  placeholder="Enter your Pan"/>
+              </div>
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                <input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
+              </div>
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                <input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirm your Password"/>
+              </div>
+            </div>
+          </div>
+  
+          <div class="form-group">
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                  <input type="password" class="form-control" name="address" id="address"  placeholder="Enter your Address"/>
+                </div>
+              </div>
+            </div>
+  
+            <div class="form-group">
+                <div class="cols-sm-10">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                    <input type="password" class="form-control" name="bank" id="bank"  placeholder="Enter your Bank Name"/>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="form-group">
+                  <div class="cols-sm-10">
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                      <input type="password" class="form-control" name="bankac" id="bankac"  placeholder="Confirm your Bank A/C no"/>
+                    </div>
+                  </div>
+                </div>
+  
+              <div class="form-group">
+                  <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
+              </div>
+          
+        </form>
+      </div>
+    </div> 
+    </div>
 
     </div>
   </div>

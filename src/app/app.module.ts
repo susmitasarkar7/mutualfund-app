@@ -9,8 +9,8 @@ import { AppComponent } from './app.component';
 
 import { HeaderComponent } from './header/header.component';
 import { FundcarouselComponent } from './fundcarousel/fundcarousel.component';
-import { FundLoginComponent } from './fundcarousel/fund-login/fund-login.component';
-import { FundInfoComponent } from './fundcarousel/fund-info/fund-info.component';
+import { SignupComponent } from './signup/signup.component';
+import { SigninComponent } from './signin/signin.component';
 
 
 @NgModule({
@@ -18,9 +18,9 @@ import { FundInfoComponent } from './fundcarousel/fund-info/fund-info.component'
     AppComponent,
     HeaderComponent,
     FundcarouselComponent,
-    FundLoginComponent,
-    FundInfoComponent,
-    NgbdCarouselConfig
+    NgbdCarouselConfig,
+    SignupComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,

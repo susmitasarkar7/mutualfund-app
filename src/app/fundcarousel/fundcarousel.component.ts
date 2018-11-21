@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FundcarouselComponent implements OnInit {
 
+  isCollasped : boolean = true;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  toggleCollape() {
+    this.isCollasped = !this.isCollasped;
+  }
 }
