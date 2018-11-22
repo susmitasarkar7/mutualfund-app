@@ -24,7 +24,7 @@ h3, p {
     border-radius: 2px;
 }
 .login-form {
-    width: 350px;
+    /* width: 300px; */
     margin: 30px auto;
     text-align: center;
 }

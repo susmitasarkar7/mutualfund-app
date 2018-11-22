@@ -86,10 +86,10 @@
         </div>
     </div>
 
-    <div class="col-lg-6">
+    <div class="col-lg-6" >
       
       <div class="login-form">
-        <form action="" method="post">
+        <form>
             <h2 class="text-center">Login</h2>   
             <div class="form-group has-error">
               <input type="text" class="form-control" name="username" placeholder="Username" required="required">
@@ -104,20 +104,23 @@
         </form>
         <p class="text-center small">Don't have an account?
            <button class="btn-info" style="color:#fff" 
-            (click)="toggleCollape()">Sign up here!</button></p>
+           (click)="openModal('custom-modal-1')">Sign up here!</button></p>
     </div>
      
+    <modal id="custom-modal-1">
+      <div class="modal">
+          <div class="modal-body">
     <div *ngIf="!isCollasped">
     <div class="login-form">
       <div class="main-login main-center">
       <h4 class="text-center">Sign Up</h4>
-        <form class="" method="post" action="#">
+        <form >
           
           <div class="form-group">
             <div class="cols-sm-10">
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                <input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
+                <input type="text" class="form-control" name="name" id="name" ngModel  placeholder="Enter your Name"/>
               </div>
             </div>
           </div>
@@ -126,7 +129,7 @@
             <div class="cols-sm-10">
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                <input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+                <input type="text" class="form-control" name="email" id="email" ngModel placeholder="Enter your Email"/>
               </div>
             </div>
           </div>
@@ -135,7 +138,7 @@
             <div class="cols-sm-10">
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                <input type="text" class="form-control" name="pan" id="pan"  placeholder="Enter your Pan"/>
+                <input type="text" class="form-control" name="pan" id="pan" ngModel placeholder="Enter your Pan"/>
               </div>
             </div>
           </div>
@@ -144,7 +147,7 @@
             <div class="cols-sm-10">
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                <input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
+                <input type="password" class="form-control" name="password" id="password" ngModel placeholder="Enter your Password"/>
               </div>
             </div>
           </div>
@@ -153,7 +156,7 @@
             <div class="cols-sm-10">
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                <input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirm your Password"/>
+                <input type="password" class="form-control" name="confirm" id="confirm" ngModel placeholder="Confirm your Password"/>
               </div>
             </div>
           </div>
@@ -162,7 +165,7 @@
               <div class="cols-sm-10">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                  <input type="password" class="form-control" name="address" id="address"  placeholder="Enter your Address"/>
+                  <input type="password" class="form-control" name="address" id="address" ngModel placeholder="Enter your Address"/>
                 </div>
               </div>
             </div>
@@ -171,7 +174,7 @@
                 <div class="cols-sm-10">
                   <div class="input-group">
                     <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                    <input type="password" class="form-control" name="bank" id="bank"  placeholder="Enter your Bank Name"/>
+                    <input type="password" class="form-control" name="bank" id="bank" ngModel placeholder="Enter your Bank Name"/>
                   </div>
                 </div>
               </div>
@@ -180,7 +183,7 @@
                   <div class="cols-sm-10">
                     <div class="input-group">
                       <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                      <input type="password" class="form-control" name="bankac" id="bankac"  placeholder="Confirm your Bank A/C no"/>
+                      <input type="password" class="form-control" name="bankac" id="bankac" ngModel placeholder="Confirm your Bank A/C no"/>
                     </div>
                   </div>
                 </div>
@@ -189,12 +192,17 @@
                   <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
               </div>
           
+              <button (click)="closeModal('custom-modal-1');">Close</button>
+
         </form>
       </div>
     </div> 
     </div>
+  </div>
+</div>
+</modal>
 
-    </div>
+  </div>
   </div>
 </div>
 

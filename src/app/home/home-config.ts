@@ -3,7 +3,7 @@ import {NgbCarouselConfig} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'ngbd-carousel-config',
-  templateUrl: 'fundcarousel.component.html',
+  templateUrl: 'home.component.html',
   providers: [NgbCarouselConfig] // add NgbCarouselConfig to the component providers
 })
 export class NgbdCarouselConfig {
